@@ -55,7 +55,8 @@ void displayMenu(const string& currentUsername, double currentBalance) {
     cout << "1. Ваш баланс: $" << currentBalance << endl;
     cout << "2. Таблица лидеров" << endl;
     cout << "3. Режимы" << endl;
-    cout << "4. Выход" << endl;
+    cout << "4. О проекте" << endl;
+    cout << "5. Выход" << endl;
 }
 
 void displayModes() {
@@ -462,6 +463,24 @@ void displayLeaderboard(const vector<LeaderboardEntry>& leaderboard) {
     cout << "-----------------------------------------" << endl;
 }
 
+void AboutProject() {
+    cout << endl;
+    cout << endl;
+    cout << "-----------------------------------------" << endl;
+    cout << "Проект Super Casino" << endl;
+    cout << "-----------------------------------------" << endl;
+    cout << "В проекте принимали участие:" << endl << endl;
+    cout << "Кузьмич Александр" << endl;
+    cout << "Хомутов Денис" << endl;
+    cout << "Гуркин Тимофей" << endl;
+    cout << "Лученок Алексей" << endl;
+    cout << "Тишкин Богдан" << endl;
+    cout << "-----------------------------------------" << endl;
+    cout << "Спасибо что выбираете нас!" << endl;
+    cout << endl;
+    cout << endl;
+}
+
 int main() {
     setlocale(LC_ALL, "ru");
     string currentUsername;
@@ -519,7 +538,7 @@ int main() {
                     break;
                 }
 
-                if (choice == 4) {
+                if (choice == 5) {
                     break;
                 }
 
@@ -527,6 +546,9 @@ int main() {
             }
             break;
         case 4:
+            AboutProject();
+            break;
+        case 5:
             saveLeaderboard(leaderboard, leaderboardFilename);
             cout << "Программа завершена." << endl;
             return 0;
