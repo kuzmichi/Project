@@ -1,1 +1,2 @@
-Admin 28000
+Mama 3 100
+Admin 55
