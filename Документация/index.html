@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект</title>
+    <style>
+                body {
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #ffa500;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #9400d3;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            font-size: 18px;
+            color: #1e90ff;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 2px solid #fff;
+            width: 100px; /* Задайте нужный размер фотографии */
+            height: 100px;
+        }
+
+        .team-member-info {
+            max-width: 300px; /* Задайте нужную ширину блока с текстом */
+            margin-left: 20px; /* Добавленный отступ текста от фотографии */
+        }
+
+        h2 {
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        ol {
+            color: #00ff00;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 30px;
+            margin-left: 20px;
+        }
+
+        a {
+            color: #00bfff;
+            text-decoration: none;
+            border-bottom: 1px dashed #00bfff;
+        }
+
+        a:hover {
+            color: #fff;
+            border-bottom: 1px dashed #fff;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            p, li, ul, ol {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Проект Super Casino</h1>
+    <p>Цель проекта: написать консольное приложение Super Casino, которое будет содержать 5 пунктов, 3 мини-игры. </p>
+    <p>Дата начала работы над проектом: 15.12.2023</p>
+    <p>Дата завершения работы над проектом: 25.12.2023</p>
+
+    <ul>Наша команда
+        <li>
+            <img src="D:\Проект\Документация\Фотографии\Александр.jpg" alt="Кузьмич Александр">
+            <div class="team-member-info">
+                <p>Кузьмич Александр, разрабатывал main.cpp, leaderboard.cpp и leaderboard.h. Имел участие в расзработке игры в games.cpp и games.h (Виселица).  Оценка вклада: 10 баллов</p>
+                <p>ФИО: Александр Кузьмич</p>
+                <p>Вклад в проект: 10 баллов</p>
+            </div>
+        </li>
+        <li>
+            <img src="D:\Проект\Документация\Фотографии\Тимофей.jpg" alt="Гуркин Тимофей">
+            <div class="team-member-info">
+                <p>Гуркин Тимофей, Имел участие в расзработке игры в games.cpp и games.h (Угадай число). Участие в написании .html документа проекта. Оценка вклада: 9 баллов</p>
+                <p>ФИО: Тимофей Гуркин</p>
+                <p>Вклад в проект: 9 баллов</p>
+            </div>
+        </li>
+        <li>
+            <img src="D:\Проект\Документация\Фотографии\Денис.jpg" alt="Хомутов Денис">
+            <div class="team-member-info">
+                <p>Хомутов Денис, принял участие в разработке игры в games.cpp и  games.h (Black Jack). тестировал и исправлял ошибки, также в проекте принял участие в написании некоторых пунктов в программе. Оценка вклада: 9 баллов</p>
+                <p>ФИО: Денис Хомутов</p>
+                <p>Вклад в проект: 9 баллов</p>
+            </div>
+        </li>
+        <li>
+            <img src="D:\Проект\Документация\Фотографии\Алексей.jpg" alt="Лученок Алексей">
+            <div class="team-member-info">
+                <p>Лученок Алексей, Разрабатывал utils.cpp, utils.h, занимался дизайном и помощью в представлени программы для пользователя, принял участие в разработке игры в games.cpp и games.h(Black Jack). Оценка вклада: 9 баллов</p>
+                <p>ФИО: Алексей Лученок</p>
+                <p>Вклад в проект: 9 баллов</p>
+            </div>
+        </li>
+        <li>
+            <img src="D:\Проект\Документация\Фотографии\Богдан.jpg" alt="Тишкин Богдан">
+            <div class="team-member-info">
+                <p>Тишкин Богдан, Принял участие в разработке игры в games.cpp и games.h(Монетка), оказал помощь в написании документации. Оценка вклада: 9 баллов</p>
+                <p>ФИО: Богдан Тишкин</p>
+                <p>Вклад в проект: 9 баллов</p>
+            </div>
+        </li>
+    </ul>
+
+    <h2>Мини-игры</h2>
+    <ol>
+        <li><strong>Виселица:</strong> Описание игры... <a href="https://minigames.mail.ru/info/article/igra_slova_viselica_pravila#:~:text=%D0%92%D0%B8%D1%81%D0%B5%D0%BB%D0%B8%D1%86%D0%B0%20%E2%80%93%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%20%D0%B8%D0%B3%D1%80%D0%B0%20%D0%B2%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0,%D0%B2%20%D1%82%D1%80%D1%91%D1%85%20%D1%80%D0%B0%D1%83%D0%BD%D0%B4%D0%B0%D1%85%2C%20%D0%B2%D1%8B%D0%B8%D0%B3%D1%80%D1%8B%D0%B2%D0%B0%D0%B5%D1%82%20%D0%B8%D0%B3%D1%80%D1%83.">Подробнее</a></li>
+        <li><strong>Угадай число:</strong> Описание игры... <a href="https://help.just-ai.com/docs/ru/common/tutorials/guess_number_bot/guess_number_bot/#:~:text=%D0%91%D0%BE%D1%82%20%D0%B7%D0%B0%D0%B3%D0%B0%D0%B4%D1%8B%D0%B2%D0%B0%D0%B5%D1%82%20%D0%BB%D1%8E%D0%B1%D0%BE%D0%B5%20%D1%87%D0%B8%D1%81%D0%BB%D0%BE%20%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%BC,%D1%83%D0%B3%D0%B0%D0%B4%D0%B0%D0%B5%D1%82%20%D1%87%D0%B8%D1%81%D0%BB%D0%BE%2C%20%D0%B8%D0%B3%D1%80%D0%B0%20%D1%81%D1%87%D0%B8%D1%82%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9.">Подробнее</a></li>
+        <li><strong>Black Jack:</strong> Описание игры... <a href="https://shangrila.by/ru/poleznaya-informatsiya/pravila-igry-v-blehkdzhek/">Подробнее</a></li>
+        <li><strong>Монетка:</strong> Описание игры... <a href="https://gamerules.ru/igry-s-monetami">Подробнее</a></li>
+    </ol>
+
+    <h2>Контакты</h2>
+    <p>Для связи с нами вы можете написать по адресу: <a href="mailto:info@super-casino.com">info@super-casino.com</a></p>
+
+    <h2>Исходный код</h2>
+    <p>Вы можете найти исходный код проекта на нашей странице GitHub: <a href="https://github.com/kuzmichi/Project">GitHub</a></p>
+</body>
+</html>
