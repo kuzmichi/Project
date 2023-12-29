@@ -1,3 +1,4 @@
+
 #include "games.h"
 #include "utils.h"
 #include <iostream>
@@ -11,14 +12,14 @@ void playGuessNumber(double& balance) {
 
     int secretNumber = generateRandomNumber(minNumber, maxNumber);
 
-    cout << "Добро пожаловать в игру 'Угадай число'!" << endl;
-    cout << "Я загадал число от " << minNumber << " до " << maxNumber << ". Попробуйте угадать!" << endl;
+    cout << "Г„Г®ГЎГ°Г® ГЇГ®Г¦Г Г«Г®ГўГ ГІГј Гў ГЁГЈГ°Гі 'Г“ГЈГ Г¤Г Г© Г·ГЁГ±Г«Г®'!" << endl;
+    cout << "Гџ Г§Г ГЈГ Г¤Г Г« Г·ГЁГ±Г«Г® Г®ГІ " << minNumber << " Г¤Г® " << maxNumber << ". ГЏГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГіГЈГ Г¤Г ГІГј!" << endl;
 
     int attempts = 0;
     int guess;
     double bet;
     do {
-        cout << "Введите вашу ставку (0 для выхода из игры): ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ ГёГі Г±ГІГ ГўГЄГі (0 Г¤Г«Гї ГўГ»ГµГ®Г¤Г  ГЁГ§ ГЁГЈГ°Г»): ";
         cin >> bet;
 
         if (bet == 0) {
@@ -26,48 +27,48 @@ void playGuessNumber(double& balance) {
         }
 
         if (bet < 0 || bet > balance) {
-            cout << "Недопустимая ставка. Пожалуйста, введите ставку от 0 до вашего текущего баланса." << endl;
+            cout << "ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г Гї Г±ГІГ ГўГЄГ . ГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , ГўГўГҐГ¤ГЁГІГҐ Г±ГІГ ГўГЄГі Г®ГІ 0 Г¤Г® ГўГ ГёГҐГЈГ® ГІГҐГЄГіГ№ГҐГЈГ® ГЎГ Г«Г Г­Г±Г ." << endl;
         }
     } while (bet < 0 || bet > balance);
 
 
     while (true) {
-        cout << "Введите ваш вариант: ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ Гё ГўГ Г°ГЁГ Г­ГІ: ";
         cin >> guess;
 
         attempts++;
 
         if (guess == secretNumber) {
-            cout << "Поздравляю! Вы угадали число с " << attempts << " попытки!" << endl;
+            cout << "ГЏГ®Г§Г¤Г°Г ГўГ«ГїГѕ! Г‚Г» ГіГЈГ Г¤Г Г«ГЁ Г·ГЁГ±Г«Г® Г± " << attempts << " ГЇГ®ГЇГ»ГІГЄГЁ!" << endl;
 
 
             if (attempts == 1) {
-                cout << "Вы угадали с первой попытки! Ваш выигрыш умножен на 20!" << endl;
+                cout << "Г‚Г» ГіГЈГ Г¤Г Г«ГЁ Г± ГЇГҐГ°ГўГ®Г© ГЇГ®ГЇГ»ГІГЄГЁ! Г‚Г Гё ГўГ»ГЁГЈГ°Г»Гё ГіГ¬Г­Г®Г¦ГҐГ­ Г­Г  20!" << endl;
                 balance -= bet;
                 balance += bet * 20;
             }
             else if (attempts == 2) {
-                cout << "Вы угадали со второй попытки! Ваш выигрыш умножен на 10!" << endl;
+                cout << "Г‚Г» ГіГЈГ Г¤Г Г«ГЁ Г±Г® ГўГІГ®Г°Г®Г© ГЇГ®ГЇГ»ГІГЄГЁ! Г‚Г Гё ГўГ»ГЁГЈГ°Г»Гё ГіГ¬Г­Г®Г¦ГҐГ­ Г­Г  10!" << endl;
                 balance -= bet;
                 balance += bet * 10;
             }
             else if (attempts == 3) {
-                cout << "Вы угадали с третьей попытки! Ваш выигрыш умножен на 5!" << endl;
+                cout << "Г‚Г» ГіГЈГ Г¤Г Г«ГЁ Г± ГІГ°ГҐГІГјГҐГ© ГЇГ®ГЇГ»ГІГЄГЁ! Г‚Г Гё ГўГ»ГЁГЈГ°Г»Гё ГіГ¬Г­Г®Г¦ГҐГ­ Г­Г  5!" << endl;
                 balance -= bet;
                 balance += bet * 5;
             }
             else if (attempts == 4) {
-                cout << "Вы угадали с четвертой попытки! Ваш выигрыш умножен на 3!" << endl;
+                cout << "Г‚Г» ГіГЈГ Г¤Г Г«ГЁ Г± Г·ГҐГІГўГҐГ°ГІГ®Г© ГЇГ®ГЇГ»ГІГЄГЁ! Г‚Г Гё ГўГ»ГЁГЈГ°Г»Гё ГіГ¬Г­Г®Г¦ГҐГ­ Г­Г  3!" << endl;
                 balance -= bet;
                 balance += bet * 3;
             }
             else if (attempts == 5) {
-                cout << "Вы угадали с пятой попытки! Ваш выигрыш умножен на 2!" << endl;
+                cout << "Г‚Г» ГіГЈГ Г¤Г Г«ГЁ Г± ГЇГїГІГ®Г© ГЇГ®ГЇГ»ГІГЄГЁ! Г‚Г Гё ГўГ»ГЁГЈГ°Г»Гё ГіГ¬Г­Г®Г¦ГҐГ­ Г­Г  2!" << endl;
                 balance -= bet;
                 balance += bet * 2;
             }
             else {
-                cout << "Вы угадали с шестой или более попытки. Ваша ставка сгорает." << endl;
+                cout << "Г‚Г» ГіГЈГ Г¤Г Г«ГЁ Г± ГёГҐГ±ГІГ®Г© ГЁГ«ГЁ ГЎГ®Г«ГҐГҐ ГЇГ®ГЇГ»ГІГЄГЁ. Г‚Г ГёГ  Г±ГІГ ГўГЄГ  Г±ГЈГ®Г°Г ГҐГІ." << endl;
                 balance -= bet;
 
             }
@@ -75,10 +76,10 @@ void playGuessNumber(double& balance) {
             break;
         }
         else if (guess < secretNumber) {
-            cout << "Загаданное число больше. Попробуйте еще раз." << endl;
+            cout << "Г‡Г ГЈГ Г¤Г Г­Г­Г®ГҐ Г·ГЁГ±Г«Г® ГЎГ®Г«ГјГёГҐ. ГЏГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГҐГ№ГҐ Г°Г Г§." << endl;
         }
         else {
-            cout << "Загаданное число меньше. Попробуйте еще раз." << endl;
+            cout << "Г‡Г ГЈГ Г¤Г Г­Г­Г®ГҐ Г·ГЁГ±Г«Г® Г¬ГҐГ­ГјГёГҐ. ГЏГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГҐГ№ГҐ Г°Г Г§." << endl;
         }
     }
 }
@@ -109,7 +110,7 @@ void BlackJack(double& balance) {
 
     double bet;
     do {
-        cout << "Введите вашу ставку (0 для выхода из игры): ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ ГёГі Г±ГІГ ГўГЄГі (0 Г¤Г«Гї ГўГ»ГµГ®Г¤Г  ГЁГ§ ГЁГЈГ°Г»): ";
         cin >> bet;
 
         if (bet == 0) {
@@ -117,7 +118,7 @@ void BlackJack(double& balance) {
         }
 
         if (bet < 0 || bet > balance) {
-            cout << "Недопустимая ставка. Пожалуйста, введите ставку от 0 до вашего текущего баланса." << endl;
+            cout << "ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г Гї Г±ГІГ ГўГЄГ . ГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , ГўГўГҐГ¤ГЁГІГҐ Г±ГІГ ГўГЄГі Г®ГІ 0 Г¤Г® ГўГ ГёГҐГЈГ® ГІГҐГЄГіГ№ГҐГЈГ® ГЎГ Г«Г Г­Г±Г ." << endl;
         }
     } while (bet < 0 || bet > balance);
 
@@ -132,26 +133,26 @@ void BlackJack(double& balance) {
     dealerHand.push_back(drawCard());
     dealerHand.push_back(drawCard());
 
-    cout << "У вас на руках: " << playerHand[0] << " и " << playerHand[1] << endl;
-    cout << "Дилер показывает карту: " << dealerHand[0] << endl;
+    cout << "Г“ ГўГ Г± Г­Г  Г°ГіГЄГ Гµ: " << playerHand[0] << " ГЁ " << playerHand[1] << endl;
+    cout << "Г„ГЁГ«ГҐГ° ГЇГ®ГЄГ Г§Г»ГўГ ГҐГІ ГЄГ Г°ГІГі: " << dealerHand[0] << endl;
 
     while (true) {
         int sum = calculateSum(playerHand);
-        cout << "Сумма ваших карт: " << sum << endl;
+        cout << "Г‘ГіГ¬Г¬Г  ГўГ ГёГЁГµ ГЄГ Г°ГІ: " << sum << endl;
 
         if (sum == 21) {
-            cout << "Поздравляем! У вас блэкджек!" << endl;
+            cout << "ГЏГ®Г§Г¤Г°Г ГўГ«ГїГҐГ¬! Г“ ГўГ Г± ГЎГ«ГЅГЄГ¤Г¦ГҐГЄ!" << endl;
             balance -= bet;
             balance += bet * 10;
             break;
         }
         else if (sum > 21) {
-            cout << "У вас перебор. Вы проиграли." << endl;
+            cout << "Г“ ГўГ Г± ГЇГҐГ°ГҐГЎГ®Г°. Г‚Г» ГЇГ°Г®ГЁГЈГ°Г Г«ГЁ." << endl;
             break;
         }
 
         char choice;
-        cout << "Хотите взять еще карту? (y/n): ";
+        cout << "Г•Г®ГІГЁГІГҐ ГўГ§ГїГІГј ГҐГ№ГҐ ГЄГ Г°ГІГі? (y/n): ";
         cin >> choice;
 
         if (choice == 'y' || choice == 'Y') {
@@ -171,24 +172,24 @@ void BlackJack(double& balance) {
     int playerSum = calculateSum(playerHand);
     int dealerSum = calculateSum(dealerHand);
 
-    cout << "Ваши карты: ";
+    cout << "Г‚Г ГёГЁ ГЄГ Г°ГІГ»: ";
     for (int card : playerHand) {
         cout << card << " ";
     }
-    cout << " (Сумма: " << playerSum << ")" << endl;
+    cout << " (Г‘ГіГ¬Г¬Г : " << playerSum << ")" << endl;
 
-    cout << "Карты дилера: ";
+    cout << "ГЉГ Г°ГІГ» Г¤ГЁГ«ГҐГ°Г : ";
     for (int card : dealerHand) {
         cout << card << " ";
     }
-    cout << " (Сумма: " << dealerSum << ")" << endl;
+    cout << " (Г‘ГіГ¬Г¬Г : " << dealerSum << ")" << endl;
 
     if (playerSum > 21 || (dealerSum <= 21 && dealerSum >= playerSum)) {
-        cout << "Дилер выиграл." << endl;
+        cout << "Г„ГЁГ«ГҐГ° ГўГ»ГЁГЈГ°Г Г«." << endl;
         balance -= bet;
     }
     else {
-        cout << "Вы выиграли!" << endl;
+        cout << "Г‚Г» ГўГ»ГЁГЈГ°Г Г«ГЁ!" << endl;
         balance -= bet;
         balance += bet * 10;
     }
@@ -204,7 +205,7 @@ void CoinFlip(double& balance) {
     char userChoice;
     double bet;
     do {
-        cout << "Введите вашу ставку (0 для выхода из игры): ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ ГёГі Г±ГІГ ГўГЄГі (0 Г¤Г«Гї ГўГ»ГµГ®Г¤Г  ГЁГ§ ГЁГЈГ°Г»): ";
         cin >> bet;
 
         if (bet == 0) {
@@ -212,43 +213,43 @@ void CoinFlip(double& balance) {
         }
 
         if (bet < 0 || bet > balance) {
-            cout << "Недопустимая ставка. Пожалуйста, введите ставку от 0 до вашего текущего баланса." << endl;
+            cout << "ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г Гї Г±ГІГ ГўГЄГ . ГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , ГўГўГҐГ¤ГЁГІГҐ Г±ГІГ ГўГЄГі Г®ГІ 0 Г¤Г® ГўГ ГёГҐГЈГ® ГІГҐГЄГіГ№ГҐГЈГ® ГЎГ Г«Г Г­Г±Г ." << endl;
         }
     } while (bet < 0 || bet > balance);
 
 
-    std::cout << "Выберите сторону монетки (1 - орел, 2 - решка): ";
+    std::cout << "Г‚Г»ГЎГҐГ°ГЁГІГҐ Г±ГІГ®Г°Г®Г­Гі Г¬Г®Г­ГҐГІГЄГЁ (1 - Г®Г°ГҐГ«, 2 - Г°ГҐГёГЄГ ): ";
     std::cin >> userChoice;
 
 
     if (userChoice == '1') {
-        std::cout << "Вы выбрали орла!" << std::endl;
+        std::cout << "Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Г®Г°Г«Г !" << std::endl;
     }
     else if (userChoice == '2') {
-        std::cout << "Вы выбрали решку!" << std::endl;
+        std::cout << "Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Г°ГҐГёГЄГі!" << std::endl;
     }
     else {
-        std::cout << "Некорректный выбор. Пожалуйста, введите '1' или '2'." << std::endl;
+        std::cout << "ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»Г© ГўГ»ГЎГ®Г°. ГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , ГўГўГҐГ¤ГЁГІГҐ '1' ГЁГ«ГЁ '2'." << std::endl;
         return;
     }
 
     bool result = flipCoin();
 
     if (result) {
-        std::cout << "Выпал орел!" << std::endl;
+        std::cout << "Г‚Г»ГЇГ Г« Г®Г°ГҐГ«!" << std::endl;
     }
     else {
-        std::cout << "Выпала решка!" << std::endl;
+        std::cout << "Г‚Г»ГЇГ Г«Г  Г°ГҐГёГЄГ !" << std::endl;
     }
 
 
     if ((userChoice == '1' && result) || (userChoice == '2' && !result)) {
-        std::cout << "Поздравляем, вы угадали!" << std::endl;
+        std::cout << "ГЏГ®Г§Г¤Г°Г ГўГ«ГїГҐГ¬, ГўГ» ГіГЈГ Г¤Г Г«ГЁ!" << std::endl;
         balance -= bet;
         balance += bet * 2;
     }
     else {
-        std::cout << "Увы, вы не угадали." << std::endl;
+        std::cout << "Г“ГўГ», ГўГ» Г­ГҐ ГіГЈГ Г¤Г Г«ГЁ." << std::endl;
         balance -= bet;
     }
 
@@ -257,8 +258,8 @@ void CoinFlip(double& balance) {
 
 wstring chooseWord() {
     locale::global(locale(""));
-    vector<wstring> words = { L"программирование", L"виселица", L"серебро", L"слово", L"алгоритм", L"техника", L"турбогенератор", L"пневмосклероз", L"кинофильм",
-        L"бром", L"биосфера", L"маяк", L"автомат", L"сессия", L"символ", L"автомобиль", L"гироскутер", L"худи", L"майка", L"алгоритмизация", L"космос", L"солнце", L"Dota2" };
+    vector<wstring> words = { L"ГЇГ°Г®ГЈГ°Г Г¬Г¬ГЁГ°Г®ГўГ Г­ГЁГҐ", L"ГўГЁГ±ГҐГ«ГЁГ¶Г ", L"Г±ГҐГ°ГҐГЎГ°Г®", L"Г±Г«Г®ГўГ®", L"Г Г«ГЈГ®Г°ГЁГІГ¬", L"ГІГҐГµГ­ГЁГЄГ ", L"ГІГіГ°ГЎГ®ГЈГҐГ­ГҐГ°Г ГІГ®Г°", L"ГЇГ­ГҐГўГ¬Г®Г±ГЄГ«ГҐГ°Г®Г§", L"ГЄГЁГ­Г®ГґГЁГ«ГјГ¬",
+        L"ГЎГ°Г®Г¬", L"ГЎГЁГ®Г±ГґГҐГ°Г ", L"Г¬Г ГїГЄ", L"Г ГўГІГ®Г¬Г ГІ", L"Г±ГҐГ±Г±ГЁГї", L"Г±ГЁГ¬ГўГ®Г«", L"Г ГўГІГ®Г¬Г®ГЎГЁГ«Гј", L"ГЈГЁГ°Г®Г±ГЄГіГІГҐГ°", L"ГµГіГ¤ГЁ", L"Г¬Г Г©ГЄГ ", L"Г Г«ГЈГ®Г°ГЁГІГ¬ГЁГ§Г Г¶ГЁГї", L"ГЄГ®Г±Г¬Г®Г±", L"Г±Г®Г«Г­Г¶ГҐ", L"Dota2" };
     int randomIndex = rand() % words.size();
     return words[randomIndex];
 }
@@ -287,7 +288,7 @@ void Hangman(double& balance) {
     int attemptsLeft = maxAttempts;
     double bet;
     do {
-        cout << "Введите вашу ставку (0 для выхода из игры): ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ ГёГі Г±ГІГ ГўГЄГі (0 Г¤Г«Гї ГўГ»ГµГ®Г¤Г  ГЁГ§ ГЁГЈГ°Г»): ";
         cin >> bet;
 
         if (bet == 0) {
@@ -295,39 +296,39 @@ void Hangman(double& balance) {
         }
 
         if (bet < 0 || bet > balance) {
-            cout << "Недопустимая ставка. Пожалуйста, введите ставку от 0 до вашего текущего баланса." << endl;
+            cout << "ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г Гї Г±ГІГ ГўГЄГ . ГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , ГўГўГҐГ¤ГЁГІГҐ Г±ГІГ ГўГЄГі Г®ГІ 0 Г¤Г® ГўГ ГёГҐГЈГ® ГІГҐГЄГіГ№ГҐГЈГ® ГЎГ Г«Г Г­Г±Г ." << endl;
         }
     } while (bet < 0 || bet > balance);
 
     vector<wchar_t> guessedLetters;
 
-    wcout << L"Добро пожаловать в игру Виселица!" << endl;
+    wcout << L"Г„Г®ГЎГ°Г® ГЇГ®Г¦Г Г«Г®ГўГ ГІГј Гў ГЁГЈГ°Гі Г‚ГЁГ±ГҐГ«ГЁГ¶Г !" << endl;
 
     while (attemptsLeft > 0) {
-        wcout << L"Слово: " << displayWord(secretWord, guessedLetters) << endl;
-        wcout << L"Угаданные буквы: ";
+        wcout << L"Г‘Г«Г®ГўГ®: " << displayWord(secretWord, guessedLetters) << endl;
+        wcout << L"Г“ГЈГ Г¤Г Г­Г­Г»ГҐ ГЎГіГЄГўГ»: ";
         for (wchar_t letter : guessedLetters) {
             wcout << letter << L" ";
         }
         wcout << endl;
 
         wchar_t guess;
-        wcout << L"Введите букву: ";
+        wcout << L"Г‚ГўГҐГ¤ГЁГІГҐ ГЎГіГЄГўГі: ";
         wcin >> guess;
 
         if (find(guessedLetters.begin(), guessedLetters.end(), guess) != guessedLetters.end()) {
-            wcout << L"Вы уже вводили эту букву. Попробуйте другую." << endl;
+            wcout << L"Г‚Г» ГіГ¦ГҐ ГўГўГ®Г¤ГЁГ«ГЁ ГЅГІГі ГЎГіГЄГўГі. ГЏГ®ГЇГ°Г®ГЎГіГ©ГІГҐ Г¤Г°ГіГЈГіГѕ." << endl;
             continue;
         }
 
         guessedLetters.push_back(guess);
 
         if (secretWord.find(guess) == wstring::npos) {
-            wcout << L"Такой буквы нет. Осталось попыток: " << --attemptsLeft << endl;
+            wcout << L"Г’Г ГЄГ®Г© ГЎГіГЄГўГ» Г­ГҐГІ. ГЋГ±ГІГ Г«Г®Г±Гј ГЇГ®ГЇГ»ГІГ®ГЄ: " << --attemptsLeft << endl;
         }
 
         if (displayWord(secretWord, guessedLetters) == secretWord) {
-            wcout << L"Поздравляем, вы угадали слово: " << secretWord << endl;
+            wcout << L"ГЏГ®Г§Г¤Г°Г ГўГ«ГїГҐГ¬, ГўГ» ГіГЈГ Г¤Г Г«ГЁ Г±Г«Г®ГўГ®: " << secretWord << endl;
             balance -= bet;
             balance += bet * 3;
             break;
@@ -335,7 +336,7 @@ void Hangman(double& balance) {
     }
 
     if (attemptsLeft == 0) {
-        wcout << L"Вы проиграли. Загаданное слово было: " << secretWord << endl;
+        wcout << L"Г‚Г» ГЇГ°Г®ГЁГЈГ°Г Г«ГЁ. Г‡Г ГЈГ Г¤Г Г­Г­Г®ГҐ Г±Г«Г®ГўГ® ГЎГ»Г«Г®: " << secretWord << endl;
         balance -= bet;
     }
 
